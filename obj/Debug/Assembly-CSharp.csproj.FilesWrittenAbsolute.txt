@@ -1,0 +1,17 @@
+/Users/k-takekawa-mac/PG/unity/go/Temp/bin/Debug/UnityEngine.dll
+/Users/k-takekawa-mac/PG/unity/go/Temp/bin/Debug/UnityEditor.dll
+/Users/k-takekawa-mac/PG/unity/go/Temp/bin/Debug/UnityEngine.Analytics.dll
+/Users/k-takekawa-mac/PG/unity/go/Temp/bin/Debug/UnityEngine.PlaymodeTestsRunner.dll
+/Users/k-takekawa-mac/PG/unity/go/Temp/bin/Debug/UnityEngine.Networking.dll
+/Users/k-takekawa-mac/PG/unity/go/Temp/bin/Debug/UnityEngine.UI.dll
+/Users/k-takekawa-mac/PG/unity/go/Temp/bin/Debug/UnityEngine.HoloLens.dll
+/Users/k-takekawa-mac/PG/unity/go/Temp/bin/Debug/UnityEngine.VR.dll
+/Users/k-takekawa-mac/PG/unity/go/Temp/bin/Debug/Mono.Cecil.dll
+/Users/k-takekawa-mac/PG/unity/go/Temp/bin/Debug/Unity.SerializationLogic.dll
+/Users/k-takekawa-mac/PG/unity/go/Temp/bin/Debug/Unity.DataContract.dll
+/Users/k-takekawa-mac/PG/unity/go/Temp/bin/Debug/ICSharpCode.NRefactory.dll
+/Users/k-takekawa-mac/PG/unity/go/Temp/bin/Debug/Unity.UNetWeaver.dll
+/Users/k-takekawa-mac/PG/unity/go/Temp/bin/Debug/Unity.UNetWeaver.dll.mdb
+/Users/k-takekawa-mac/PG/unity/go/Temp/bin/Debug/Unity.CecilTools.dll
+/Users/k-takekawa-mac/PG/unity/go/Temp/bin/Debug/Mono.Cecil.Pdb.dll
+/Users/k-takekawa-mac/PG/unity/go/Temp/bin/Debug/Mono.Cecil.Mdb.dll
