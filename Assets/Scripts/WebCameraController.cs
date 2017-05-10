@@ -10,17 +10,16 @@ public class WebCameraController : MonoBehaviour {
 	const int FPS = 60;
 
 	void Start(){
-		//Quad???????????
 		float _h = maincamera.orthographicSize * 2;
 		float _w = _h * maincamera.aspect;
 
-		if (Input.deviceOrientation == DeviceOrientation.FaceUp) {
+		// PC,スマホともにここに入る
+		if (Input.deviceOrientation != DeviceOrientation.LandscapeLeft) {
 			transform.localScale = new Vector3 (_h, _w, 1);
 			transform.localRotation *= Quaternion.Euler (0, 0, -90);
 		} else {
 			transform.localScale = new Vector3 (_w, _h, 1);
 		}
-		//??????????Quad????
 		Renderer rend = GetComponent<Renderer>();
 		if(WebCamTexture.devices.Length > 0){
 			WebCamDevice cam = WebCamTexture.devices[0];

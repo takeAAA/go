@@ -5,6 +5,7 @@ using UnityEngine;
 public class ThrowBall : MonoBehaviour {
 
 	public GameObject ball;
+	public GameObject laser;
 	private Vector3 startPos;
 	private Vector3 endPos;
 	private float ballTime;
@@ -19,13 +20,17 @@ public class ThrowBall : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (ballMove) {
+			ball.GetComponent<Rigidbody> ().useGravity = true;
 			ballTime += Time.deltaTime;
 		}
-		if (ballTime > 5) {
+		if (ballTime > 1) {
 			ball.GetComponent<Rigidbody> ().velocity = Vector3.zero;
 			ball.GetComponent<Rigidbody> ().angularVelocity = Vector3.zero;
-			ball.GetComponent<Rigidbody> ().position = new Vector3 (0, (float)-4.5, 0);
+			ball.GetComponent<Rigidbody> ().position = new Vector3 (0, (float)-4.5, -15);
+			//ball.GetComponent<Rigidbody> ().position 
+			//	= new Vector3(Camera.main.transform.position.x, Camera.main.transform.position.y, 0);
 			ballMove = false;
+			ball.GetComponent<Rigidbody> ().useGravity = false;
 			ballTime = 0;
 		}
 	}
@@ -40,7 +45,7 @@ public class ThrowBall : MonoBehaviour {
 			endPos = ray.origin;
 		}else if (e.type == EventType.MouseUp){
 			if (!ballMove){
-				ball.GetComponent<Rigidbody>().AddForce(Vector3.Scale(new Vector3(endPos.x - startPos.x, endPos.y - startPos.y, (endPos.y - startPos.y) * -1), new Vector3(1, -1, 1)) * 50);
+				ball.GetComponent<Rigidbody>().AddForce(Vector3.Scale(new Vector3(endPos.x - startPos.x, endPos.y - startPos.y, (endPos.y - startPos.y) * -1), new Vector3(1, -1, 1)) * 100);
 			}
 			ballMove = true;
 		}
@@ -48,7 +53,9 @@ public class ThrowBall : MonoBehaviour {
 
 	private void OnCollisionEnter(Collision collision){
 		if(collision.gameObject.tag == "enemy"){
-			ball.GetComponent<Rigidbody> ().position = new Vector3 ((float)-4.3, (float)3, (float)0.8);
+			ball.GetComponent<Rigidbody> ().isKinematic = true;
+			ball.GetComponent<Rigidbody> ().position = new Vector3 ((float)-4, (float)2, (float)-10);
+			Instantiate(laser.gameObject, new Vector3 ((float)-4, (float)2, (float)-10), Quaternion.identity);
 			Destroy(collision.gameObject);
 		}
 	}
